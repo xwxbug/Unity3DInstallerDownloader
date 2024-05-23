@@ -1,2 +1,27 @@
-# Unity3DInstallerDownloader
-Unity3D Installer Downloader
+## 这是啥
+这个项目用于存储 Unity Technologies 的 Unity3D 安装文件下载地址.
+运行需求 WIN10 (需要自带的curl来下载),其他系统自行搞个curl就行了.
+
+## 如何使用
+clone 之后运行各个版本的 .cmd 文件即可.
+
+如果需要设置 curl 的代理:
+可以在 .cmd 文件的头部加上:(自己改改)
+```
+set http_proxy=http://什么鬼:那是啥
+:: or
+set https_proxy=http://什么鬼:那是啥
+```	
+
+## 注意
+在不同国家下载的可能是不同的版本,即使下载地址看起来一样.批处理里面有安装包的md5值,可以用来校验下载的文件是否正确.
+
+因为是批量处理的,可能部分版本缺失或者错误,请自行检查.
+
+已知可能下载到的特供版:
+2018.1.0f2
+2018.2.19f1
+
+china 目录中的是 Unity 在中国的特供版...
+## 这堆文件是怎么来的
+来自 https://unity.com/releases/editor/archive 这个页面.UnityHub 会请求每个版本的信息,这个请求的返回值里面包含了下载地址和文件的描述.
